@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "Volcanic Activity Detection and Forecasting Using a Diffusion Based Model"
+authors:
+  - family-names: Ishtiaq
+    given-names: Syed Faisal
+  - family-names: Kleijn
+    given-names: W. Bastiaan
+  - family-names: Teal
+    given-names: Paul D.
+year: 2026
+# Update the following fields once the article DOI / volume / pages are assigned.
+preferred-citation:
+  type: article
+  title: "Volcanic Activity Detection and Forecasting Using a Diffusion Based Model"
+  authors:
+    - family-names: Ishtiaq
+      given-names: Syed Faisal
+    - family-names: Kleijn
+      given-names: W. Bastiaan
+    - family-names: Teal
+      given-names: Paul D.
+  journal: "Applied Computing and Geosciences"
+  publisher: "Elsevier"
+  year: 2026
+  doi: "10.1016/j.acags.2026.100385"

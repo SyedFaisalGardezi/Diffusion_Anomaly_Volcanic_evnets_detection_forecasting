@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+
+# Large artefacts NOT tracked in this repo (see README)
+# Model weights (train your own; ~1 GB each)
+*.pth
+model_weights/
+# Raw / processed seismic data (obtain from GeoNet / IRIS; see README)
+data/raw/
+data/processed/
+data_external/
+# Bulky per-segment score caches / figure exports
+cfg/results/mse_analysis/
+*.npy

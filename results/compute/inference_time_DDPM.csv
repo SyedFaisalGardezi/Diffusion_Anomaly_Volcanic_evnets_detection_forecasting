@@ -1,0 +1,4 @@
+Volcano,Device,Segments,Dataset (s),Dataset (min),Per-segment (ms),Per-48h (ms)
+Whakaari,cuda:0,11162,35851.6,597.53,3211.9,18500.7
+Ruapehu,cuda:0,3153,10454.1,174.23,3315.6,19097.8
+Pavlof,cuda:0,2623,8547.7,142.46,3258.7,18770.3

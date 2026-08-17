@@ -1,0 +1,6 @@
+"DDPM (Ardid-exact, label-free)",48h,best-smoothed,Ardid (supervised)
+Whakaari,0.869,0.870 @24h,0.89 tailored / 0.96 gen
+Ruapehu,0.881,0.884 @96h,0.80 phreatic pool
+Pavlof,0.533,0.609 @96h,0.81 magmatic pool
+Phreatic pool (Wh+Ru),—,0.866,0.80
+All-volcano pool,—,0.800,0.80 world

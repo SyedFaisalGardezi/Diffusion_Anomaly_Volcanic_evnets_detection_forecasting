@@ -1,0 +1,10 @@
+Volcano,lambda_max,AUC raw,AUC 48h-smooth,min
+whakaari,100,0.826,0.904,1.4
+whakaari,250,0.794,0.926,3.4
+whakaari,500,0.806,0.926,6.9
+ruapehu,100,0.560,0.588,1.2
+ruapehu,250,0.613,0.732,3.0
+ruapehu,500,0.605,0.646,5.9
+pavlof,100,0.536,0.742,1.4
+pavlof,250,0.420,0.508,3.4
+pavlof,500,0.406,0.433,6.8

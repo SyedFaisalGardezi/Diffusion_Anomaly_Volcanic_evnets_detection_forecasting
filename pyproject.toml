@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cfg_ddim"
+version = "1.0.0"
+description = "Diffusion-based (DDPM + Time-Step Guidance) anomaly detection and forecasting for volcanic tremor time series"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Syed Faisal Ishtiaq" },
+  { name = "W. Bastiaan Kleijn" },
+  { name = "Paul D. Teal" },
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+packages = ["cfg_ddim"]

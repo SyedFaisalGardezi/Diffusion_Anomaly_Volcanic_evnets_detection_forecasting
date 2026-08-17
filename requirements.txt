@@ -1,0 +1,15 @@
+# Core
+torch>=2.0
+torchvision>=0.15
+numpy>=1.23
+pandas>=1.5
+scipy>=1.9
+scikit-learn>=1.2
+matplotlib>=3.6
+Pillow>=9.0
+
+# Diffusion / experiment tooling
+opensimplex>=0.4        # simplex-noise corruption option (AnoDDPM-style)
+labml>=0.5              # experiment tracking + config system used by the training/eval entry points
+labml-helpers>=0.4      # DeviceConfigs helper used in experiment_cfg_ddim.py
+tadpak>=0.1             # PA%K (point-adjust @ K) evaluation protocol used in metrics.py

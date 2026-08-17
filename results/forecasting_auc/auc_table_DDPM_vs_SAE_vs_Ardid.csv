@@ -1,0 +1,4 @@
+Volcano,DDPM MSE (ours),DDPM combined,DDPM MSE causal-2d,SAE V_seg,Ardid supervised,Ardid antic.
+Whakaari,0.844,0.534,—,0.89,0.89 (tailored),4/5
+Ruapehu,0.709,0.523,—,0.82,0.80 (phreatic pool),1/2
+Pavlof,0.544,0.508,0.552,0.57 (0.70),0.81 (magmatic pool),0/2
