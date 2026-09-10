@@ -859,13 +859,13 @@ def main():
         configs.image_channels = 5  
         test_path = "./cfg/data/processed/yahoo/learningData_yahoo_test_norm.csv"
         configs.dataset = YahooSub5Dataset(test_path, chunk_size=configs.chunk_size,start_timestamp=start_time, end_timestamp=end_time)
-        exp = "21"
+        exp = "yahoo"
 
     elif d_name == "Tremor":
         if tremor_type == "Ruapehu":
             configs.image_channels = 5
             # exp = "22_Tremor"   # # "24_Tremor"  # for Whakaari
-            exp = "23_50_Tremor"  #  "23_Tremor"  ## ruapehu
+            exp = "ruapehu"  #  "23_Tremor"  ## ruapehu
             
             print(f"testing the dataset:  {d_name}")
             test_path = "./cfg/data/raw/Ruapehu_seismic_data_with_ssam_norm_z_percen_m11.csv"
@@ -876,7 +876,7 @@ def main():
         elif tremor_type == "Whakaari": ##     # 
             configs.image_channels = 5
             # exp = "22_Tremor"   # # "24_Tremor"  # for Whakaari
-            exp = "27_Tremor"  #"22_Tremor"  
+            exp = "whakaari"  #"22_Tremor"  
             
             print(f"testing the dataset:  {d_name}")
             # test_path = "./cfg/data/raw/modified_Whakaari_WIZ_eruption_data_norm_minus1_1_with_SSAM.csv"
@@ -888,7 +888,7 @@ def main():
             
         elif tremor_type == "Pavlof":
             configs.image_channels = 5
-            exp = "29_Tremor"  
+            exp = "pavlof"  
             
             print(f"testing the dataset:  {d_name}")
             test_path =  "./cfg/data/raw/outside_NZ/PVV_seismic_data_with_ssam_norm_z_percen_m11.csv"
@@ -917,11 +917,9 @@ def main():
     event= "Dec-2019"
     img_sav_path = f"./cfg/results/figures/evaluation_results_tsg_exp{exp}_{tremor_type}_{configs.lambda_max}_{start_time}to{end_time}_{d_name}_{wtsg}.png"
     
-    configs.save_model_path = f"./cfg/src/cfg_ddim/model_weights/tsg_ddim_TSG_V10_TSG_exp_{exp}.pth"
+    configs.save_model_path = f"./cfg/src/cfg_ddim/model_weights/{exp}.pth"
     
-    # configs.save_model_path = "./cfg/src/cfg_ddim/model_weights/tsg_ddim_v9_ode2_heun_pattern_seasonal_TSGconst_1.0_1K_steps.pth"
     
-    #"./cfg/src/cfg_ddim/model_weights/tsg_ddim_v9_ode2_heun_pattern_seasonal_TSGconst_1.5.pth"
 
     
     

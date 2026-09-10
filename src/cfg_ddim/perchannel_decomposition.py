@@ -49,10 +49,10 @@ if not os.path.exists(PAVLOF) and os.path.exists(_SAE): PAVLOF = _SAE
 # (csv, exp_id, focused window [contains the detected episode], eruption date for the vline)
 CASES = {
     "whakaari": (os.path.join(BASE_DIR, "cfg/data/processed/previous_paper_data/WIZ_with_ssam_asof_norm_z_percen_m11.csv"),
-                 "27_Tremor", "2019-07-01", "2019-12-31", "2019-12-09 01:11"),
+                 "whakaari", "2019-07-01", "2019-12-31", "2019-12-09 01:11"),
     "ruapehu":  (os.path.join(BASE_DIR, "cfg/data/raw/Ruapehu_seismic_data_with_ssam_norm_z_percen_m11.csv"),
-                 "23_Tremor", "2007-06-01", "2007-10-10", "2007-09-25"),
-    "pavlof":   (PAVLOF, "29_Tremor", "2016-01-01", "2016-04-30", "2016-03-28"),
+                 "ruapehu", "2007-06-01", "2007-10-10", "2007-09-25"),
+    "pavlof":   (PAVLOF, "pavlof", "2016-01-01", "2016-04-30", "2016-03-28"),
 }
 
 # ---- tolerant checkpoint loader (Configs pickled into ckpt) ----------------
@@ -81,7 +81,7 @@ def build(exp):
              is_attn=[False, False, False, True], n_blocks=2).to(DEVICE)
     diff = DenoiseDiffusion(eps_model=m, n_steps=N_STEPS, device=DEVICE, guidance_scale=WTSG,
                             lambda_max=LAMBDA_MAX, T_MIN=T_MIN, T_MAX=N_STEPS - T_MIN, S=S, ALPHA=ALPHA)
-    ck = torch.load(os.path.join(BASE_DIR, f"cfg/src/cfg_ddim/model_weights/tsg_ddim_TSG_V10_TSG_exp_{exp}.pth"),
+    ck = torch.load(os.path.join(BASE_DIR, f"cfg/src/cfg_ddim/model_weights/{exp}.pth"),
                     map_location=DEVICE, weights_only=False, pickle_module=_PM)
     m.load_state_dict(ck["model_state_dict"]); m.eval()
     return diff

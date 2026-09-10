@@ -848,7 +848,7 @@ def main():
         configs.image_channels = 5
         test_path = "./cfg/data/processed/yahoo/learningData_yahoo_test_norm.csv"
         configs.dataset = YahooSub5Dataset(test_path, chunk_size=configs.chunk_size,start_timestamp=start_time, end_timestamp=end_time)
-        exp = "21"
+        exp = "yahoo"
 
     elif d_name == "WADI":
         configs.image_channels = 123 
@@ -857,7 +857,7 @@ def main():
         labels_wadi = "./cfg/data/processed/WaDi/WADI.A1_9 Oct 2017/attack_labels.csv"
         configs.dataset = WADIDataset(data_path= test_path, label_path=labels_wadi, start_time=start_time, end_time=end_time, chunk_size=configs.chunk_size)
         configs.dataset_val =  WADIDataset(data_path= test_path, label_path=labels_wadi, start_time=start_time, end_time=end_time, chunk_size=configs.chunk_size)
-        exp = "20"
+        exp = "wadi"
 
     elif d_name == "SWAT":
         configs.image_channels = 51 
@@ -867,7 +867,7 @@ def main():
         
         configs.dataset = SWATTestDataset(file_path= test_path, start_index=start_time, end_index=end_time, chunk_size=configs.chunk_size)
         configs.dataset_val = SWATTestDataset(file_path= test_path, start_index=start_time, end_index=end_time, chunk_size=configs.chunk_size)
-        exp = "28_SWAT"  # "25_50_SWAT"   #   "26_SWAT" #"25_500_SWAT"    #   "25_50"
+        exp = "swat"  # "25_50_SWAT"   #   "26_SWAT" #"25_500_SWAT"    #   "25_50"
     
     elif d_name == "synthetic":
         configs.image_channels = 5
@@ -878,7 +878,7 @@ def main():
         configs.dataset = SyntheticDataset(test_path, chunk_size=configs.chunk_size,start_index=start_time, end_index=end_time)
         val_path = f"./cfg/data/processed/my_synth_gen/{d_name_sy}.csv"
         configs.dataset_val = SyntheticDataset(val_path, chunk_size=configs.chunk_size,             start_index=start_time, end_index=end_time)
-        exp = "19"
+        exp = "synthetic"
         d_name = d_name_sy
         
 #     # # Load entire CSV and parse the time column
@@ -922,14 +922,11 @@ def main():
     event= "Dec-2019"
     img_sav_path = f"./cfg/results/figures/evaluation_results_tsg_exp{exp}_{configs.lambda_max}_{start_time}to{end_time}_{d_name}_{wtsg}_{noise_type}.png"
     
-    # configs.save_model_path = f"./cfg/src/cfg_ddim/model_weights/old_weights/tsg_ddim_TSG_V10_TSG_exp_{exp}.pth"
     
-    configs.save_model_path = f"./cfg/src/cfg_ddim/model_weights/tsg_ddim_TSG_V10_TSG_exp_{exp}.pth"
+    configs.save_model_path = f"./cfg/src/cfg_ddim/model_weights/{exp}.pth"
     
     
-    # configs.save_model_path = "./cfg/src/cfg_ddim/model_weights/tsg_ddim_v9_ode2_heun_pattern_seasonal_TSGconst_1.0_1K_steps.pth"
     
-    #"./cfg/src/cfg_ddim/model_weights/tsg_ddim_v9_ode2_heun_pattern_seasonal_TSGconst_1.5.pth"
 
     
     

@@ -131,7 +131,7 @@ The file `reference/eruptive_periods.txt` lists the eruption onsets used to buil
 
 ## Model weights
 
-Trained checkpoints are not distributed, as each is about 1 GB. Train your own with the training entry point below. Checkpoints are written to `./cfg/src/cfg_ddim/model_weights/`, and the evaluation scripts load a checkpoint by its experiment tag (for example `exp = "27_Tremor"` for the Whakaari model in the paper).
+Trained checkpoints are not distributed, as each is about 1 GB. Train your own with the training entry point below. Each checkpoint is named after the volcano or dataset it was trained on and written to `./cfg/src/cfg_ddim/model_weights/<name>.pth` (for example `whakaari.pth`, `ruapehu.pth`, `pavlof.pth`, `swat.pth`). The evaluation scripts load a checkpoint by the same name through the `exp` field.
 
 ## Usage
 

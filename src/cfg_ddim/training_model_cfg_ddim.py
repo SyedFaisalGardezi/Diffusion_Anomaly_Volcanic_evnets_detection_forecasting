@@ -65,7 +65,7 @@ original_configs = vars(Configs()).copy()
 
 # In[18]:
 
-exp = "exp_30"
+exp = "whakaari"   # checkpoint name; e.g. whakaari / ruapehu / pavlof / swat / wadi / synthetic
 dataset ='Tremor'  #  'SWAT'  #        'MNIST', 'Synthetic' , 'Yahoo' , 'WADI' # 'SWAT'   #  #
 experiment.configs(configs, {
     # 'dataset': dataset,
@@ -79,7 +79,7 @@ experiment.configs(configs, {
     "ALPHA" : 1.0,
     "S" : 2.0,
     "exp" : exp,
-    "save_model_path":f"./cfg/src/cfg_ddim/model_weights/tsg_ddim_TSG_V10_TSG_{exp}_{dataset}.pth",
+    "save_model_path":f"./cfg/src/cfg_ddim/model_weights/{exp}.pth",
 })
 
 
