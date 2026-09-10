@@ -100,7 +100,9 @@ scripts — see [Usage](#usage).)
 │   ├── evaluate_cgf_ddim_tremor.py  # >>> volcano evaluation (anomaly score + AUC)
 │   ├── evaluate_cgf_ddim.py         # >>> benchmark multivariate-AD evaluation
 │   ├── testing.py                   # standalone reconstruction/score testing
-│   └── metrics.py              # F1_K-AUC, ROC_K-AUC, PA%K protocol
+│   ├── metrics.py              # F1_K-AUC, ROC_K-AUC, PA%K protocol
+│   ├── perchannel_decomposition.py  # per-channel anomaly decomposition (paper Fig. D1)
+│   └── anticipation_analysis.py     # eruption-anticipation counts at a fixed operating point
 ├── notebooks/
 │   ├── DDPM_forecasting_evaluation_GPU.ipynb   # forecasting-skill AUC (Ardid protocol)
 │   └── _build_eval_gpu_nb.py                    # script that generates the notebook
